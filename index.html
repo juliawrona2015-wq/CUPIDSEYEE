@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cupid's Eye ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+:root {
+  --pink: #ff8fbd;
+  --hot: #e94f91;
+  --pale: #fff0f7;
+  --ink: #68284d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  background: #fff7fb;
+  overflow-x: hidden;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 10% 20%, #ffd1e4 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 70%, #ffc1dc 0 3px, transparent 4px),
+    linear-gradient(140deg, #fff9fc, #ffe8f3 45%, #fff8fc);
+  background-size: 39px 39px, 57px 57px, 100% 100%;
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 0 0 12px #f06aa8;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: .25; transform: scale(.7) rotate(0); }
+  50% { opacity: 1; transform: scale(1.3) rotate(25deg); }
+}
+
+/* NAVIGATION */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px clamp(18px, 5vw, 64px);
+  background: #fff8fbd9;
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid #ffc2dc;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--hot);
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: .7rem;
+  letter-spacing: 2px;
+  display: block;
+  color: #a55b80;
+}
+
+.navlinks {
+  display: flex;
+  gap: 9px;
+}
+
+.navlinks a {
+  font-size: .83rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid #ffc1da;
+  background: #fff;
+  border-radius: 99px;
+  padding: 9px 15px;
+  transition: .25s;
+}
+
+.navlinks a:hover {
+  background: var(--hot);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 650px;
+  padding: 65px 20px 50px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.eyebrow {
+  font-size: .75rem;
+  letter-spacing: 4px;
+  font-weight: 800;
+  color: #a54d79;
+  text-transform: uppercase;
+}
+
+/* SMOOTHER HEART LOGO */
+
+.logo-orb {
+  width: min(360px, 82vw);
+  aspect-ratio: 1;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  margin: 25px auto 22px;
+  background: radial-gradient(
+    circle at 30% 20%,
+    #fff 0 3%,
+    #ffe4f0 17%,
+    #ffb5d4 47%,
+    #f47db2 72%,
+    #d94e91 100%
+  );
+  -webkit-clip-path: path("M180 330 C150 300 15 210 15 115 C15 35 105 10 180 85 C255 10 345 35 345 115 C345 210 210 300 180 330 Z");
+  clip-path: path("M180 330 C150 300 15 210 15 115 C15 35 105 10 180 85 C255 10 345 35 345 115 C345 210 210 300 180 330 Z");
+  filter: drop-shadow(0 20px 20px #c74c8335);
+  animation: float 5s ease-in-out infinite;
+}
+
+.logo-orb:before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 3px solid #ffffffaa;
+  border-radius: 42% 42% 45% 45%;
+  pointer-events: none;
+}
+
+.logo-orb:after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 2px dashed #ec73a9;
+  border-radius: 40% 40% 45% 45%;
+  pointer-events: none;
+  animation: spin 30s linear infinite;
+}
+
+.logo-text {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  padding: 0 17%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 7vw, 3.1rem);
+  font-style: italic;
+  line-height: 1;
+  color: #fff;
+  text-shadow:
+    0 3px 0 #e46ba4,
+    0 7px 0 #d74f8c,
+    0 12px 18px #a82f6a66;
+  letter-spacing: -1px;
+  overflow-wrap: normal;
+}
+
+.logo-text small {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(.38rem, 1.5vw, .55rem);
+  font-style: normal;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  margin-top: 12px;
+  text-shadow: none;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 2.6rem;
+  color: #fff;
+  text-shadow: 0 3px 0 #e76da4, 0 0 18px #ff5ba3;
+  animation: orbit 7s ease-in-out infinite;
+  z-index: 3;
+}
+
+.arrow.a {
+  top: 22%;
+  right: 22%;
+  transform: rotate(28deg);
+}
+
+.arrow.b {
+  bottom: 24%;
+  left: 21%;
+  animation-delay: -3s;
+  transform: rotate(-30deg);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes orbit {
+  50% { translate: 8px -13px; rotate: 15deg; }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: .97;
+  margin: 15px 0;
+  color: #8e315f;
+  letter-spacing: -2px;
+}
+
+h1 em {
+  color: #ed6da5;
+}
+
+.sub {
+  max-width: 530px;
+  line-height: 1.7;
+  margin: 15px auto 25px;
+  color: #975d7b;
+}
+
+.button {
+  border: 0;
+  border-radius: 99px;
+  background: linear-gradient(120deg, #f36ba7, #d94487);
+  color: white;
+  padding: 14px 23px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 0 #bd3d78, 0 14px 22px #e66ba544;
+  display: inline-block;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 0 #bd3d78, 0 20px 25px #e66ba544;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 70px clamp(18px, 6vw, 80px);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-head p {
+  color: #a45b7c;
+}
+
+.section-head h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin: 8px 0;
+  color: #87315b;
+}
+
+.section-head h2 em {
+  color: #ed6da5;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+  max-width: 720px;
+  margin: 35px auto;
+}
+
+.stat {
+  padding: 22px 8px;
+  text-align: center;
+  border-radius: 23px;
+  background: #ffffffc9;
+  border: 1px solid #ffc1da;
+  box-shadow: 0 6px 0 #ffd6e7;
+  backdrop-filter: blur(8px);
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.8rem;
+  color: #a43b70;
+}
+
+.stat span {
+  font-size: .8rem;
+  color: #a96c88;
+}
+
+.bio {
+  max-width: 720px;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #ffbdd9;
+  border-radius: 28px;
+  background: #fffdf2;
+  box-shadow: 0 12px 30px #e26b9c20;
+  text-align: center;
+  line-height: 1.9;
+}
+
+.bio b {
+  color: #d84d8c;
+}
+
+/* MEMBER CARDS */
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.member {
+  position: relative;
+  overflow: hidden;
+  border-radius: 27px;
+  padding: 18px 12px 20px;
+  text-align: center;
+  background: linear-gradient(145deg, #fff, #ffe4f0);
+  border: 1px solid #ffc1dc;
+  box-shadow: 0 8px 0 #fbd0e2;
+  transition: .3s;
+}
+
+.member:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 15px 0 #f6bfd8;
+}
+
+.portrait {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  font-size: 2.8rem;
+  background: radial-gradient(circle at 30% 20%, #fff, #ffb5d4 55%, #e966a1);
+  border: 5px solid #fff;
+  box-shadow: 0 0 0 2px #f4a4c6, 0 7px 20px #e76ca340;
+}
+
+.member h3 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.tile {
+  aspect-ratio: 4 / 5;
+  border-radius: 23px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(145deg, #ffb7d5, #e65c9a 70%, #a83772);
+  box-shadow: inset 0 0 0 1px #fff8;
+  transition: .25s;
+}
+
+.tile:nth-child(2n) {
+  background: linear-gradient(145deg, #f9d4e7, #e78db9 55%, #bc4c88);
+}
+
+.tile:nth-child(3n) {
+  background: linear-gradient(145deg, #d9c9ff, #ee91c4 65%, #c8478b);
+}
+
+.tile:hover {
+  transform: scale(1.025) rotate(1deg);
+}
+
+.tile:before {
+  content: "♡";
+  position: absolute;
+  font-size: 8rem;
+  right: -8px;
+  bottom: -32px;
+  color: #ffffff30;
+  transform: rotate(-20deg);
+}
+
+.tile .mini {
+  font-size: .68rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.tile strong {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.05;
+  z-index: 1;
+}
+
+.tile span:last-child {
+  font-size: .8rem;
+  z-index: 1;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 42px 20px 55px;
+  background: #ffedf5;
+  border-top: 1px solid #ffc4dc;
+  color: #a35d7d;
+}
+
+footer .brand {
+  font-size: 1.7rem;
+}
+
+footer p {
+  font-size: .8rem;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 120px);
+  padding: 12px 18px;
+  background: #7e2c56;
+  color: #fff;
+  border-radius: 99px;
+  z-index: 20;
+  transition: .4s;
+  box-shadow: 0 8px 30px #6b214444;
+}
+
+.toast.show {
+  transform: translate(-50%, 0);
+}
+
+/* ANGEL POPUP */
+
+.angel-popup {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #67244755;
+  backdrop-filter: blur(7px);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s;
+  padding: 20px;
+}
+
+.angel-popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.angel-card {
+  position: relative;
+  width: min(390px, 92vw);
+  padding: 30px 22px 26px;
+  text-align: center;
+  border-radius: 32px;
+  border: 2px solid #fff;
+  background: linear-gradient(145deg, #fffaff, #ffe3f0 60%, #ffd0e5);
+  box-shadow: 0 0 0 7px #ffc3dc88, 0 25px 80px #79244b55;
+  transform: translateY(25px) scale(.86);
+  transition: transform .45s cubic-bezier(.2, 1.4, .4, 1);
+  overflow: hidden;
+}
+
+.angel-popup.open .angel-card {
+  transform: translateY(0) scale(1);
+}
+
+.angel-card:before,
+.angel-card:after {
+  content: '✦';
+  position: absolute;
+  color: #fff;
+  font-size: 30px;
+  animation: twinkle 1.8s infinite;
+}
+
+.angel-card:before {
+  left: 18px;
+  top: 18px;
+}
+
+.angel-card:after {
+  right: 18px;
+  top: 35px;
+  animation-delay: -.8s;
+}
+
+.angel-art {
+  position: relative;
+  margin: 0 auto 8px;
+  width: 210px;
+  height: 205px;
+  display: grid;
+  place-items: center;
+  animation: angelFloat 2.8s ease-in-out infinite;
+}
+
+.angel-art .halo {
+  position: absolute;
+  top: 9px;
+  width: 74px;
+  height: 20px;
+  border: 4px solid #f3b548;
+  border-radius: 50%;
+  box-shadow: 0 0 17px #ffd66d;
+  transform: rotate(-8deg);
+}
+
+.angel-art .wings {
+  position: absolute;
+  top: 65px;
+  font-size: 75px;
+  letter-spacing: -23px;
+  color: #fff;
+  text-shadow: 0 2px 0 #f6a5ca, 0 0 16px #fff;
+  z-index: 0;
+}
+
+.angel-art .wings.left {
+  left: 2px;
+  transform: rotate(-24deg);
+}
+
+.angel-art .wings.right {
+  right: 24px;
+  transform: scaleX(-1) rotate(-24deg);
+}
+
+.angel-art .angel-face {
+  position: absolute;
+  top: 47px;
+  left: 76px;
+  width: 61px;
+  height: 67px;
+  border-radius: 48% 48% 45% 45%;
+  background: linear-gradient(135deg, #fff4e7, #ffd4df);
+  border: 3px solid white;
+  box-shadow: 0 4px 0 #f0a6c6;
+  z-index: 2;
+}
+
+.angel-face:before {
+  content: '•  •';
+  white-space: pre;
+  position: absolute;
+  top: 23px;
+  left: 12px;
+  font-size: 16px;
+  letter-spacing: 7px;
+  color: #9b4b72;
+}
+
+.angel-face:after {
+  content: '⌣';
+  position: absolute;
+  left: 24px;
+  top: 33px;
+  color: #df6a99;
+  font-size: 19px;
+}
+
+.angel-art .hair {
+  position: absolute;
+  top: 42px;
+  left: 71px;
+  width: 70px;
+  height: 49px;
+  border-radius: 50% 50% 20% 20%;
+  border-top: 10px solid #f1c5a0;
+  border-left: 7px solid #f1c5a0;
+  border-right: 7px solid #f1c5a0;
+  z-index: 3;
+}
+
+.angel-art .dress {
+  position: absolute;
+  top: 105px;
+  left: 65px;
+  width: 84px;
+  height: 79px;
+  background: linear-gradient(135deg, #fff, #ffacd0 60%, #e96aa5);
+  clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+  border-bottom: 3px solid #fff;
+  z-index: 2;
+}
+
+.angel-art .bow {
+  position: absolute;
+  top: 73px;
+  right: 9px;
+  font-size: 52px;
+  z-index: 4;
+  transform: rotate(-25deg);
+  filter: drop-shadow(0 3px 0 #c33f7e);
+}
+
+.angel-art .arrowline {
+  position: absolute;
+  right: 0;
+  top: 92px;
+  font-size: 65px;
+  color: #d9a13c;
+  transform: rotate(-20deg);
+  z-index: 5;
+  text-shadow: 0 2px 0 #fff;
+}
+
+.angel-art .spark {
+  position: absolute;
+  color: #e9b74f;
+  font-size: 23px;
+  animation: twinkle 1.3s infinite;
+}
+
+.angel-art .s1 { left: 10px; top: 37px; }
+.angel-art .s2 { right: 9px; top: 15px; animation-delay: -.5s; }
+.angel-art .s3 { left: 27px; bottom: 8px; animation-delay: -.9s; }
+
+@keyframes angelFloat {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-9px) rotate(1deg); }
+}
+
+.angel-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  line-height: 1.15;
+  margin: 4px 0;
+  color: #c34180;
+}
+
+.angel-card p {
+  color: #975373;
+  line-height: 1.55;
+  margin: 8px auto 18px;
+  max-width: 280px;
+}
+
+.close-angel {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  border: 0;
+  background: #fff9;
+  color: #a93c72;
+  font-size: 23px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 6;
+}
+
+/* MOBILE FRIENDLY */
+
+@media (min-width: 800px) {
+  .hero { min-height: 730px; }
+  .members { grid-template-columns: repeat(6, 1fr); }
+  .portrait { width: 85px; height: 85px; font-size: 2.2rem; }
+  .member { padding: 16px 8px; }
+  .gallery { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .navlinks a { padding: 8px 10px; font-size: .7rem; }
+  .brand { font-size: 1.1rem; }
+  .hero { min-height: 610px; }
+  .logo-orb { width: min(330px, 88vw); }
+  .logo-text { font-size: clamp(1.8rem, 7vw, 2.5rem); padding: 0 16%; }
+  .logo-text small { font-size: .36rem; letter-spacing: 1px; }
+  .members { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  section { padding-top: 55px; padding-bottom: 55px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sparkle" style="left:8%;top:22%">✦</div>
+<div class="sparkle" style="left:88%;top:33%;animation-delay:-1s">✧</div>
+<div class="sparkle" style="left:15%;top:76%;animation-delay:-2s">♡</div>
+<div class="sparkle" style="left:92%;top:82%;animation-delay:-.5s">✦</div>
+
+<nav>
+  <a class="brand" href="#home">Cupid's Eye <span>♡ SIX GIRLS, ONE DREAM</span></a>
+  <div class="navlinks">
+    <a href="#members">THE GIRLS</a>
+    <a href="#moments">MOMENTS</a>
+    <a href="#bio">OUR BIO</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="eyebrow">♡ a little love, a lot of sparkle ♡</div>
+
+  <div class="logo-orb">
+    <span class="arrow a">➶</span>
+    <span class="arrow b">♡</span>
+    <div class="logo-text">Cupid's<br>Eye<small>LOVE IN EVERY FRAME</small></div>
+  </div>
+
+  <h1>Six hearts.<br><em>One dream.</em></h1>
+
+  <p class="sub">
+    A little page for our six girls ♡ edits, updates, favourite moments
+    and all the things that make us love them. 🏹
+  </p>
+
+  <a class="button" href="#members">Meet the girls ♡</a>
+</header>
+
+<section id="bio">
+  <div class="section-head">
+    <div class="eyebrow">THE OFFICIAL LITTLE CORNER</div>
+    <h2>Love at <em>first sight</em></h2>
+    <p>Your little corner for all things Cupid's Eye.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong>♡ 6</strong><span>dreamers</span></div>
+    <div class="stat"><strong>∞</strong><span>little moments</span></div>
+    <div class="stat"><strong>✧ 1</strong><span>shared dream</span></div>
+  </div>
+
+  <div class="bio">
+    <b>♡ Cupid's Eye 🏹🌸</b><br>
+    Just six girls we love, cute edits, and all the little moments in between.<br>
+    <b>Mimi · Jade · Jia · Kitty · Tiana · Hailey</b><br>
+    ✧ good songs, cute moments &amp; lots of love ✧
+  </div>
+</section>
+
+<section id="members">
+  <div class="section-head">
+    <div class="eyebrow">YOUR NEW FAVOURITE PEOPLE</div>
+    <h2>Meet the <em>cupids</em></h2>
+    <p>Six girls, six different vibes. We love them all.</p>
+  </div>
+
+  <div class="members">
+    <div class="member"><div class="portrait">🎀</div><h3>Mimi</h3></div>
+    <div class="member"><div class="portrait">💋</div><h3>Jade</h3></div>
+    <div class="member"><div class="portrait">🌟</div><h3>Jia</h3></div>
+    <div class="member"><div class="portrait">🪽</div><h3>Kitty</h3></div>
+    <div class="member"><div class="portrait">💎</div><h3>Tiana</h3></div>
+    <div class="member"><div class="portrait">🌙</div><h3>Hailey</h3></div>
+  </div>
+</section>
+
+<section id="moments">
+  <div class="section-head">
+    <div class="eyebrow">LITTLE CLIPS, BIG FEELINGS</div>
+    <h2>The <em>love reel</em></h2>
+    <p>A few little moments we'd totally make edits about.</p>
+  </div>
+
+  <div class="gallery">
+    <div class="tile">
+      <span class="mini">01 / THE BEGINNING</span>
+      <strong>Audition<br>diaries ✧</strong>
+      <span>Every dream starts somewhere</span>
+    </div>
+
+    <div class="tile">
+      <span class="mini">02 / STAGE LIGHTS</span>
+      <strong>Pink<br>stage fever ♡</strong>
+      <span>Made to glow together</span>
+    </div>
+
+    <div class="tile">
+      <span class="mini">03 / GROUP CHAT</span>
+      <strong>Behind<br>the sparkle</strong>
+      <span>Unfiltered cupid energy</span>
+    </div>
+
+    <div class="tile">
+      <span class="mini">04 / THE SIGN</span>
+      <strong>Follow<br>the arrow ➶</strong>
+      <span>A little fate, a lot of fun</span>
+    </div>
+
+    <div class="tile">
+      <span class="mini">05 / FOREVER SIX</span>
+      <strong>One dream.<br>Six hearts.</strong>
+      <span>Our favourite kind of magic</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a class="brand" href="#home">Cupid's Eye ♡</a>
+  <p>fan page made with love ♡</p>
+  <button class="button" id="loveBtn">Send a little love ♡</button>
+</footer>
+
+<!-- ANGEL POPUP -->
+<div class="angel-popup" id="angelPopup" role="dialog"
+     aria-modal="true" aria-label="Cupid's Eye angel">
+
+  <div class="angel-card">
+    <button class="close-angel" id="closeAngel" aria-label="Close popup">×</button>
+
+    <div class="angel-art" aria-hidden="true">
+      <div class="halo"></div>
+      <div class="wings left">❧</div>
+      <div class="wings right">❧</div>
+      <div class="hair"></div>
+      <div class="angel-face"></div>
+      <div class="dress"></div>
+      <div class="bow">🎀</div>
+      <div class="arrowline">➶</div>
+      <span class="spark s1">✦</span>
+      <span class="spark s2">✧</span>
+      <span class="spark s3">✦</span>
+    </div>
+
+    <h3>You sent CUPIDSEYE a little love!</h3>
+    <p>Your love has reached CUPIDSEYE. ♡🏹</p>
+    <button class="button" id="angelOkay">So dreamy ♡</button>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    const target = document.querySelector(link.getAttribute('href'));
+
+    if (target) {
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+const angelPopup = document.getElementById('angelPopup');
+
+function closeAngel() {
+  angelPopup.classList.remove('open');
+}
+
+document.getElementById('loveBtn').addEventListener('click', () => {
+  angelPopup.classList.add('open');
+
+  for (let i = 0; i < 18; i++) {
+    const heart = document.createElement('span');
+
+    heart.textContent = ['♡', '✦', '✧', '♥', '🏹'][
+      Math.floor(Math.random() * 5)
+    ];
+
+    heart.style.cssText = `
+      position: fixed;
+      left: ${15 + Math.random() * 70}%;
+      top: ${45 + Math.random() * 40}%;
+      font-size: ${16 + Math.random() * 24}px;
+      color: #e84f91;
+      z-index: 60;
+      pointer-events: none;
+      transition: all 1.3s ease;
+    `;
+
+    document.body.appendChild(heart);
+
+    requestAnimationFrame(() => {
+      heart.style.transform =
+        `translate(${Math.random() * 180 - 90}px, -${100 + Math.random() * 180}px) rotate(${Math.random() * 90}deg)`;
+      heart.style.opacity = '0';
+    });
+
+    setTimeout(() => heart.remove(), 1400);
+  }
+});
+
+document.getElementById('closeAngel').addEventListener('click', closeAngel);
+document.getElementById('angelOkay').addEventListener('click', closeAngel);
+
+angelPopup.addEventListener('click', event => {
+  if (event.target === angelPopup) closeAngel();
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeAngel();
+});
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
